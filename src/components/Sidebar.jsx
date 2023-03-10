@@ -1,31 +1,25 @@
 import NoteElements from "./NoteElement";
 import "../App.css";
 
-const Sidebar = ({
-  newNote,
-  notes,
-  deleteNote,
-  setCurrentNoteId,
-  currentNote,
-}) => {
+const Sidebar = (props) => {
   return (
     <section className="pane sidebar  w-[20%] h-[100vh] overflow-y-auto ">
       <div className="sidebar--header  flex justify-between items-center">
         <h3 className="text-[1.75rem]">Notes</h3>
         <button
           className="cursor-pointer bg-[#4a4e74] text-white rounded-sm h-7 w-7 new-note "
-          onClick={newNote}
+          onClick={props.newNote}
         >
           +
         </button>
       </div>
-      {notes.map((note) => (
+      {props.notes.map((note) => (
         <NoteElements
           note={note}
           key={note.id}
-          deleteNote={deleteNote}
-          setCurrentNoteId={setCurrentNoteId}
-          currentNote={currentNote}
+          deleteNote={props.deleteNote}
+          setCurrentNoteId={props.setCurrentNoteId}
+          currentNote={props.currentNote}
         />
       ))}
     </section>
@@ -33,3 +27,11 @@ const Sidebar = ({
 };
 
 export default Sidebar;
+
+// {
+//   newNote,
+//   notes,
+//   deleteNote,
+//   setCurrentNoteId,
+//   currentNote,
+// }
