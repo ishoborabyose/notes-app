@@ -27,11 +27,3 @@ const Sidebar = (props) => {
 };
 
 export default Sidebar;
-
-// {
-//   newNote,
-//   notes,
-//   deleteNote,
-//   setCurrentNoteId,
-//   currentNote,
-// }

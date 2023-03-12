@@ -6,13 +6,13 @@ const NoteElements = ({ note, currentNote, deleteNote, setCurrentNoteId }) => {
     <>
       <div
         className={`title overflow-hidden w-full cursor-pointer flex justify-between items-center my-2  ${
-          note.id === currentNote.id ? "selected-note bg-[#4A4E74]" : " "
+          note.id === currentNote.id && "selected-note bg-[#4A4E74]"
         } `}
         onClick={() => setCurrentNoteId(note.id)}
       >
         <h4
           className={` font-normal text-[#4A4E74]  ${
-            note.id === currentNote.id ? "text-white" : ""
+            note.id === currentNote.id && "text-white"
           }`}
         >
           {note.body.split("\n")[0]}

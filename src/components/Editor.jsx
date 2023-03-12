@@ -31,6 +31,3 @@ const Editor = ({ currentNote, updateNote }) => {
 };
 
 export default Editor;
-
-// generateMarkdownPreview={(markdown) => async () =>
-//   converter.makeHtml(markdown)}
